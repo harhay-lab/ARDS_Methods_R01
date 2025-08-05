@@ -71,21 +71,49 @@ nav a:hover {
 
 /* ===== Hero Section ===== */
 .hero {
-  max-width: none;
+  position: relative;
   height: 50vh;
   overflow: hidden;
-  background-image:
-    linear-gradient(rgba(1, 31, 91, 0.7), rgba(1, 31, 91, 0.7)),
-    url('background.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
   text-align: center;
   padding: 20px;
+  color: white;
+}
+
+.slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 200%; /* double width for looping */
+  height: 100%;
+  animation: scroll 30s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.slideshow img {
+  width: 50%; /* half of slideshow container */
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 90%;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .hero h2 {
