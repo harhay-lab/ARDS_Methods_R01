@@ -205,6 +205,8 @@ footer {
   .hero {
     height: 40vh;
     padding: 15px;
+    background-image: linear-gradient(rgba(1, 31, 91, 0.7), rgba(1, 31, 91, 0.7));
+    background-color: #011F5B; /* Penn Blue */
   }
 
   .hero h2 {
@@ -235,6 +237,8 @@ footer {
 
   .hero {
     height: 35vh;
+    background-image: linear-gradient(rgba(1, 31, 91, 0.7), rgba(1, 31, 91, 0.7));
+    background-color: #011F5B; /* Penn Blue */
   }
 
   .hero h2 {
